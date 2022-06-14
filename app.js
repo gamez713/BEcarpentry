@@ -6,6 +6,9 @@ const header = document.querySelector('.header.container');
 hamburger.addEventListener('click', () => {
 	hamburger.classList.toggle('active');
 	mobile_menu.classList.toggle('active');
+
+	document.documentElement.style.overflow = 'hidden';
+	document.body.scroll = "no";
 });
 
 document.addEventListener('scroll', () => {
@@ -15,6 +18,9 @@ document.addEventListener('scroll', () => {
 	} else {
 		header.style.backgroundColor = 'transparent';
 	}
+
+	document.documentElement.style.overflow = 'scroll';
+ 	document.body.scroll = "yes";
 });
 
 menu_item.forEach((item) => {
