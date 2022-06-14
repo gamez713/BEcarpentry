@@ -22,6 +22,9 @@ document.addEventListener('scroll', () => {
 	} else {
 		header.style.backgroundColor = 'transparent';
 	}
+
+	document.documentElement.style.overflow = 'scroll';
+ 	document.body.scroll = "yes";
 });
 
 menu_item.forEach((item) => {
