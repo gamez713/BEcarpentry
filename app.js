@@ -6,13 +6,6 @@ const header = document.querySelector('.header.container');
 hamburger.addEventListener('click', () => {
 	hamburger.classList.toggle('active');
 	mobile_menu.classList.toggle('active');
-	
-	// Handle scroll behaivor.
-	if (mobile_menu.classList.contains('active')) {
-		document.body.style.overflow = 'hidden';
-	} else {
-		document.body.style.overflow = 'auto';
-	}
 });
 
 document.addEventListener('scroll', () => {
@@ -22,9 +15,6 @@ document.addEventListener('scroll', () => {
 	} else {
 		header.style.backgroundColor = 'transparent';
 	}
-
-	document.documentElement.style.overflow = 'scroll';
- 	document.body.scroll = "yes";
 });
 
 menu_item.forEach((item) => {
@@ -32,15 +22,4 @@ menu_item.forEach((item) => {
 		hamburger.classList.toggle('active');
 		mobile_menu.classList.toggle('active');
 	});
-
-	// Handle scroll behaivor.
-	if (mobile_menu.classList.contains('active')) {
-		document.body.style.overflow = 'hidden';
-	} else {
-		document.body.style.overflow = 'auto';
-	}
 });
-
-function handleScroll() {
-	document.body.style.overflow = 'auto';
-}
