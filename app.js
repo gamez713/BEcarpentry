@@ -3,9 +3,18 @@ const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
 const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
 const header = document.querySelector('.header.container');
 
+// Useless comment 
+
 hamburger.addEventListener('click', () => {
 	hamburger.classList.toggle('active');
 	mobile_menu.classList.toggle('active');
+	
+	// Handle scroll behaivor.
+	if (mobile_menu.classList.contains('active')) {
+		document.body.style.overflow = 'hidden';
+	} else {
+		document.body.style.overflow = 'auto';
+	}
 });
 
 document.addEventListener('scroll', () => {
@@ -22,4 +31,15 @@ menu_item.forEach((item) => {
 		hamburger.classList.toggle('active');
 		mobile_menu.classList.toggle('active');
 	});
+
+	// Handle scroll behaivor.
+	if (mobile_menu.classList.contains('active')) {
+		document.body.style.overflow = 'hidden';
+	} else {
+		document.body.style.overflow = 'auto';
+	}
 });
+
+function handleScroll() {
+	document.body.style.overflow = 'auto';
+}
