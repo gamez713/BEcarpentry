@@ -10,12 +10,18 @@ html {
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 }
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+}
+
 a {
 	text-decoration: none;
 }
 .container {
 	min-height: 100vh;
-	width: 100%;
+	max-width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -82,6 +88,15 @@ p {
 	width: 100vw;
 	height: auto;
 }
+
+#header-wrapper {
+	width: 100% !important;
+}
+
+/* .container {
+	max-width: 100% !important;
+} */
+
 #header .header {
 	min-height: 8vh;
 	background-color: rgba(36, 35, 33, 0.24);
