@@ -278,12 +278,6 @@ p {
 #projects .projects-header h1 {
 	margin-bottom: 50px;
 }
-#projects .all-projects {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
 /* End Recent Projects Section */
 
 
@@ -542,12 +536,6 @@ p {
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
-	}
-	#projects .all-projects .project-info {
-		height: 100%;
-	}
-	#projects .all-projects .project-img {
-		height: 100%;
 	}
 	/* Recent Projects Section */
 
