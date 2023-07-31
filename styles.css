@@ -7,15 +7,12 @@
 }
 html {
 	font-size: 10px;
-	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 }
-
 body {
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
 }
-
 a {
 	text-decoration: none;
 }
@@ -51,7 +48,6 @@ p {
 .section-title span {
 	color: burlywood;
 }
-
 .cta {
 	display: inline-block;
 	padding: 10px 30px;
@@ -79,6 +75,7 @@ p {
 }
 /* End Global Styles */
 
+
 /* Header section */
 #header {
 	position: fixed;
@@ -88,15 +85,12 @@ p {
 	width: 100vw;
 	height: auto;
 }
-
-#header-wrapper {
+/* #header-wrapper {
 	width: 100% !important;
-}
-
+} */
 /* .container {
 	max-width: 100% !important;
 } */
-
 #header .header {
 	min-height: 8vh;
 	background-color: rgba(36, 35, 33, 0.24);
@@ -283,7 +277,6 @@ p {
 
 
 /* Recent Projects Section */
-/* In Progress */
 #projects .projects {
 	flex-direction: column;
 	max-width: 1200px;
@@ -407,6 +400,7 @@ p {
 	z-index: -1;
 }
 /* End About Section */
+
 
 /* Contact Section */
 #contact .contact {
