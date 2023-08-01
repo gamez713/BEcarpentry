@@ -17,7 +17,7 @@ a {
 	text-decoration: none;
 }
 .container {
-	min-height: 100vh;
+	min-height: 50vh;
 	max-width: 100%;
 	display: flex;
 	align-items: center;
@@ -70,7 +70,7 @@ p {
 	text-transform: uppercase;
 	color: white;
 }
-.brand h1 span {
+.brand h1, p span {
 	color: burlywood;
 }
 /* End Global Styles */
@@ -218,6 +218,9 @@ p {
 	position: relative;
 	z-index: 1;
 }
+#hero .container {
+	min-height: 100vh;
+}
 #hero::after {
 	content: '';
 	position: absolute;
@@ -284,7 +287,7 @@ p {
 	padding: 100px 0;
 }
 #projects .projects-header h1 {
-	margin-bottom: 50px;
+	margin-bottom: 100px;
 }
 /* End Recent Projects Section */
 
@@ -295,7 +298,6 @@ p {
 	text-align: center;
 	max-width: 1500px;
 	margin: 0 auto;
-	padding: 100px 0;
 }
 #services .service-top {
 	max-width: 500px;
@@ -306,7 +308,7 @@ p {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-top: 50px;
+	margin-top: 60px;
 }
 #services .service-item {
     min-height: 300px;
@@ -331,7 +333,7 @@ p {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-color: burlywood;
+	background-color: #8e7656;
 	opacity: 0.2;
 	z-index: -1;
 }
@@ -341,12 +343,13 @@ p {
 	margin-bottom: 20px;
 }
 #services .service-item h2 {
-	font-size: 3rem;
+	font-size: 3.5rem;
 	color: white;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
 #services .service-item p {
+	font-size: 1.8rem;
 	color: white;
 	text-align: left;
 }
