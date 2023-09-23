@@ -319,7 +319,7 @@ p {
 	flex-direction: column;
 	padding: 30px;
 	border-radius: 10px;
-	background-image: url(./img/services.jpg);
+	background-image: url(./img/services2.jpg);
 	background-size: cover;
 	margin: 20px 5%;
 	position: relative;
@@ -333,8 +333,8 @@ p {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-color: #8e7656;
-	opacity: 0.2;
+	background-color: burlywood;
+	opacity: 0.65;
 	z-index: -1;
 }
 #services .service-bottom .icon {
