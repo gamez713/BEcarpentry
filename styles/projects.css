@@ -1,0 +1,16 @@
+/* ==============================
+   Recent Projects Section Styles
+   ============================== */
+
+/* Projects header styling */
+#projects .projects-header h1 {
+	margin-bottom: 100px; /* Space below the header */
+}
+
+/* Projects container styling */
+#projects .projects {
+	flex-direction: column; /* Stack project elements vertically */
+	max-width: 1200px; /* Max width of the container */
+	margin: 0 auto; /* Center the container */
+	padding: 100px 0; /* Vertical padding to create space above and below */
+}

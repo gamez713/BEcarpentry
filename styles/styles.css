@@ -1,3 +1,13 @@
+/*
+  This was the original stylesheet. 
+  The styles have been separated into multiple files for better organization:
+  - global.css: for global styles and common utilities
+  - header.css: for header-specific styles
+  - body.css: for content-specific sections (projects, services, about, contact)
+  - animations.css: for keyframe animations
+  - responsive.css: for media queries and responsiveness
+*/
+
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
 /* Global Styles */
 * {
@@ -212,7 +222,7 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url(./img/main.jpg);
+	background-image: url(/img/main.jpg);
 	background-size: cover;
 	background-position: top center;
 	position: relative;

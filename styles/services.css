@@ -1,0 +1,71 @@
+/* =======================
+   Services Section Styles
+   ======================= */
+
+/* Main services container */
+#services .services {
+	flex-direction: column; /* Stack elements vertically */
+	text-align: center;
+	max-width: 1500px; /* Set maximum width for the section */
+	margin: 0 auto; /* Center the container */
+}
+
+/* Top section of services (Title) */
+#services .service-top {
+	max-width: 500px; /* Limit width */
+	margin: 0 auto; /* Center this block */
+}
+
+#services .service-bottom {
+	display: flex; /* Flexbox layout */
+	align-items: center; /* Vertically center items */
+	justify-content: center; /* Horizontally center items */
+	flex-wrap: wrap;
+	margin-top: 60px;
+}
+
+/* Individual service item styling */
+#services .service-item {
+	min-height: 400px;
+	flex-basis: 80%; /* Take up 80% of the row's width */
+	display: flex;
+	align-items: flex-start; /* Align items to the top */
+	justify-content: center; /* Center content */
+	flex-direction: column; /* Stack content vertically */
+	padding: 30px;
+	border-radius: 10px; /* Rounded corners */
+	background-image: url(../img/services2.jpg);
+	background-size: cover;
+	margin: 20px 5%;
+	position: relative; /* Relative position for the overlay effect */
+	z-index: 1; /* Place above other content */
+	overflow: hidden; /* Hide overflow to prevent content spilling */
+}
+
+/* Overlay effect for background image */
+#services .service-item::after {
+	content: ''; /* Empty content for the overlay */
+	position: absolute; /* Position absolute to cover the service item */
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: burlywood; /* Burlywood overlay color */
+	opacity: 0.65; /* Semi-transparent overlay */
+	z-index: -1;
+}
+
+/* Service item title styling */
+#services .service-item h2 {
+	font-size: 3.5rem;
+	color: white;
+	margin-bottom: 10px; /* Space below the title */
+	text-transform: uppercase;
+}
+
+/* Service item description styling */
+#services .service-item p {
+	font-size: 1.8rem;
+	color: white;
+	text-align: left; /* Left-aligned text */
+}

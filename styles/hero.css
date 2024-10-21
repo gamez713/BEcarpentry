@@ -1,0 +1,89 @@
+/* ============
+   Hero  Styles
+   ============ */
+
+/* Hero Background */
+#hero {
+    background-image: url(/img/main.jpg); /* Background image for the hero section */
+    background-size: cover;
+    background-position: top center;
+    position: relative; /* Position relative for absolute children */
+    z-index: 1; /* Layering context */
+}
+
+/* Container for Hero Content */
+#hero .container {
+    min-height: 100vh; /* Full viewport height for the hero section */
+}
+
+/* Overlay effect for text readability */
+#hero::after {
+    content: ''; /* Empty content for the overlay */
+    position: absolute; /* Position absolute to cover the hero */
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black; /* Black overlay */
+    opacity: 0.7; /* Semi-transparent for text visibility */
+    z-index: -1; /* Behind hero text content */
+}
+
+/* Hero Content Styles */
+#hero .hero {
+    max-width: 1200px; /* Max width for hero content */
+    margin: 0 auto; /* Center the hero content */
+    padding: 0 50px; /* Horizontal padding */
+    display: flex; /* Flexbox for alignment */
+    justify-content: flex-start; /* Align items to the start */
+}
+
+/* Hero Heading Styles */
+#hero h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative; /* Position relative for animations */
+    color: transparent; /* Start with transparent color */
+    animation: text_reveal 0.5s ease forwards; /* Animation for text reveal */
+    animation-delay: 1s; /* Delay for animation */
+}
+
+/* Individual Heading Animations */
+#hero h1:nth-child(1) {
+    animation-delay: 1s; /* Delay for first heading */
+}
+
+#hero h1:nth-child(2) {
+    animation-delay: 2s; /* Delay for second heading */
+}
+
+#hero h1:nth-child(3) {
+    animation: text_reveal_name 0.5s ease forwards; /* Name reveal animation */
+    animation-delay: 3s; /* Delay for third heading */
+}
+
+/* Animation for Span Underline */
+#hero h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: burlywood;
+    animation: text_reveal_box 1s ease; /* Animation for the reveal box */
+    animation-delay: 0.5s; /* Delay for box reveal */
+}
+
+/* Individual Span Animations */
+#hero h1:nth-child(1) span {
+    animation-delay: 0.5s;
+}
+
+#hero h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+#hero h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
