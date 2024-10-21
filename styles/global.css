@@ -1,0 +1,94 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap';
+
+/* =============
+   Global Styles
+   ============= */
+
+/* CSS Variables for consistent theming */
+:root {
+    --primary-color: burlywood;
+    --text-color: black;
+    --white-color: white;
+}
+
+html {
+    font-size: 10px; /* Base font size */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none; /* Remove default underline from links */
+    color: var(--text-color);
+    font-size: 1.6rem; /* Base font size */
+}
+
+a {
+    text-decoration: none; /* Remove default underline for links */
+}
+
+.container {
+    min-height: 50vh; /* Minimum height for visual balance */
+    max-width: 100%; /* Max-width to fit any screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Center container */
+}
+
+img {
+    max-width: 100%; /* Prevent image stretching */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images cover their container */
+}
+
+p {
+    color: var(--text-color);
+    font-size: 1.4rem; /* Font size for paragraphs */
+    margin-top: 5px; /* Spacing for top margin */
+    line-height: 2.5rem; /* Line height for readability */
+    font-weight: 300; /* Light font weight */
+    letter-spacing: 0.05rem; /* Slight letter spacing */
+}
+
+.section-title {
+    font-size: 4rem; /* Large font size for section titles */
+    font-weight: 300; /* Light font weight for section titles */
+    color: var(--text-color);
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Uppercase for emphasis */
+    letter-spacing: 0.2rem; /* Letter spacing for readability */
+    text-align: center; /* Center align titles */
+}
+
+.section-title span {
+    color: var(--primary-color); /* Highlighted text color for spans */
+}
+
+.cta {
+    display: inline-block; /* Inline-block for button appearance */
+    padding: 10px 30px; /* Padding for button size */
+    color: var(--white-color);
+    background-color: transparent; /* Transparent background for CTA */
+    border: 2px solid var(--primary-color); /* Border color for CTA */
+    font-size: 2rem;
+    text-transform: uppercase; /* Uppercase for emphasis */
+    letter-spacing: 0.1rem; /* Letter spacing for readability */
+    margin-top: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.cta:hover {
+    color: var(--white-color); /* Text color change on hover */
+    background-color: var(--primary-color); /* Background color change on hover */
+}
+
+.brand h1 {
+    font-size: 4rem; /* Large font size for brand title */
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+.brand h1, p span {
+    color: var(--primary-color); /* Consistent color scheme */
+}

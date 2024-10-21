@@ -1,0 +1,160 @@
+/* =====================
+   Header Section Styles
+   ===================== */
+
+/* Main header container: fixed to the top, full viewport width */
+#header {
+	position: fixed; /* Keeps header fixed at the top */
+	z-index: 1000; /* High z-index to keep the header above other elements */
+	left: 0;
+	top: 0;
+	width: 100vw; /* Full width of the viewport */
+	height: auto; /* Automatic height */
+}
+
+/* Inner header element for styling and transitions */
+#header .header {
+	min-height: 8vh; /* Minimum height for header */
+	background-color: rgba(36, 35, 33, 0.24); /* Semi-transparent background */
+	transition: 0.3s ease background-color;
+}
+
+/* Navigation bar styling */
+#header .nav-bar {
+	display: flex; /* Flexbox for easy alignment */
+	align-items: center; /* Center items vertically */
+	justify-content: space-between; /* Space between logo and navigation */
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	max-width: 1300px;
+	padding: 0 10px; /* Horizontal padding */
+}
+
+/* Unordered list for navigation: positioned offscreen initially */
+#header .nav-list ul {
+	list-style: none; /* Remove default bullet points */
+	position: absolute; /* Absolute position for full control */
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 100%; /* Initially offscreen to the right */
+	top: 0;
+	display: flex; /* Flexbox for vertical centering */
+	flex-direction: column; /* Stack list items vertically */
+	justify-content: center;
+	align-items: center;
+	z-index: 1; /* Ensure it’s above other elements */
+	overflow-x: hidden; /* Hide horizontal overflow */
+	transition: 0.5s ease left;
+}
+
+/* Active class to slide in the navigation menu */
+#header .nav-list ul.active {
+	left: 0%; /* Bring the menu onscreen */
+}
+
+/* Navigation links styling */
+#header .nav-list ul a {
+	font-size: 4rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem; /* Add some letter spacing */
+	text-decoration: none; /* Remove underline */
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block; /* Block display for full width/height area */
+}
+
+/* After background effect on hover */
+#header .nav-list ul a::after {
+	content: attr(data-after); /* Text effect using custom data attribute */
+	position: absolute; /* Positioned relative to parent */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0); /* Start with no scale */
+	color: rgba(240, 248, 255, 0.021); /* Nearly transparent text */
+	font-size: 12rem; /* Huge text size */
+	letter-spacing: 50px;
+	z-index: -1; /* Behind the actual link */
+	transition: 0.3s ease letter-spacing;
+}
+
+/* Hover effect for the after element */
+#header .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1); /* Grow the text effect */
+	letter-spacing: initial; /* Reset letter spacing */
+}
+
+/* Hover effect for navigation links */
+#header .nav-list ul li:hover a {
+	color: burlywood; /* Change text color on hover */
+}
+
+/* Hamburger menu icon styling */
+#header .hamburger {
+	height: 60px; /* Size of the hamburger icon */
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white; /* White border */
+	border-radius: 50%; /* Circular icon */
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100; /* High z-index for visibility */
+	cursor: pointer;
+	transform: scale(0.8); /* Slightly smaller */
+	margin-right: 20px;
+}
+
+/* Pulsing effect for the hamburger icon */
+#header .hamburger:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%; /* Circular */
+	border: 3px solid white; /* White border */
+	animation: hamburger_puls 1s ease infinite; /* Continuous pulsing animation */
+}
+
+/* Hamburger bar styling */
+#header .hamburger .bar {
+	height: 2px; /* Thin bar for the lines */
+	width: 30px; /* Length of the bars */
+	position: relative;
+	background-color: white;
+	z-index: -1;
+}
+
+/* Top and bottom bars for the hamburger icon */
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white; /* White color */
+	transition: 0.3s ease; /* Smooth transition */
+	transition-property: top, bottom; /* Transitions for top and bottom bars */
+}
+
+/* Top bar */
+#header .hamburger .bar::after {
+	top: 8px; /* Spaced down */
+}
+
+/* Bottom bar */
+#header .hamburger .bar::before {
+	bottom: 8px; /* Spaced up */
+}
+
+/* Active hamburger menu styling */
+#header .hamburger.active .bar::before {
+	bottom: 0; /* Moves to center */
+}
+
+#header .hamburger.active .bar::after {
+	top: 0; /* Moves to center */
+}
